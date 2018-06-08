@@ -2,4 +2,93 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
+  background: darkgrey;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column-reverse wrap;
+  background: forestgreen;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.4);
+  border: solid 2px black;
+}
+
+.squares-low {
+  height: 100px;
+}
+
+.square {
+  display: inline-block;
+  width: 98px;
+  height: 98px;
+  cursor: pointer;  
+  margin: 0;
+  border: solid 1px black;
+}
+
+.disk {
+  margin: 3%;
+  width: 94%;
+  height: 94%;
+  
+  transition: 0.8s;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* .disk:active {
+  transform: rotateY(180deg);
+} */
+
+.white {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.black {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.reversed {
+  transform: rotateY(180deg);
+}
+
+p {
+  font-weight: bold;
+  font-size: 140%;
+  transition: 1s;
+}
+
+.text-white {
+  color: white;
+  text-shadow: 3px 3px black;
+}
+
+.text-black {
+  color: black;
+  text-shadow: 3px 3px white;
+}
+
+.start-menu {
+  display: inline-block;
+  margin: 100px auto;
+  text-align: center;
 }
